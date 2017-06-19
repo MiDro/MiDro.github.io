@@ -62,7 +62,20 @@
         }
      </style>
      <script type="text/javascript">
+        window.onload = function() {
+            console.log("123");
+        }
+
+
+
+
+
       $(document).ready(function(){
+        
+
+
+
+
 
       var allTheWeeks = [];  
       var allTheWeeksFixed = [];
@@ -80,6 +93,7 @@
             allTheWeeksFixed.push(getRidOfSpace);
             });  
 
+      
 
         $(".dropdown-menu li").click(function(){
             window.location.replace($(location).attr('href').replace("index.html", "posts/"+allTheWeeksFixed[$(this).index()]+".html"));
