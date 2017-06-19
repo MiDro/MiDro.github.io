@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Compiled source #
 ###################
 *.com
@@ -39,4 +38,4 @@ Thumbs.db
 =======
 updateServer.py
 code/server/updateServer.py
->>>>>>> 17a651958ce79b92a30b304b76429ca0eab63970
+
