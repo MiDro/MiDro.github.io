@@ -96,6 +96,7 @@
       
 
         $(".dropdown-menu li").click(function(){
+            console.log($(location).attr('href').replace("index.html", "posts/"+allTheWeeksFixed[$(this).index()]+".html"));
             window.location.replace($(location).attr('href').replace("index.html", "posts/"+allTheWeeksFixed[$(this).index()]+".html"));
 
         });
@@ -125,7 +126,7 @@
                         <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Weeks
                         <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                             <li><a href="./posts/week1.html">Week 1</a></li>
+                             <li><a href="#">Week 1</a></li>
                              <li><a href="./posts/week2.html">Week 2</a></li>
                              <li><a href="./posts/week3.html">Week 3</a></li>
                              <li><a href="./posts/week4.html">Week 4</a></li>
