@@ -87,7 +87,7 @@
       
 
         $(".dropdown-menu li").click(function(){
-            window.location.replace($(location).attr('href') + "posts/"+allTheWeeksFixed[$(this).index()]+".html");
+            window.location.replace(($(location).attr('href') + "posts/"+allTheWeeksFixed[$(this).index()]+".html").toLowerCase());
 
         });
 
