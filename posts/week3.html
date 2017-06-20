@@ -20,7 +20,38 @@
     <!-- Temporary navbar container fix -->
     <link href="https://fonts.googleapis.com/css?family=Spectral" rel="stylesheet">
      <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-     
+    <link rel="stylesheet" type="text/css" href="../css/kuracss.css">
+         <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+     <style type="text/css">
+     .navbar-brand{
+        cursor: pointer;
+
+     }
+     </style>
+     <script type="text/javascript">
+     window.onload = function(){
+        var link = window.location.href;
+        var weekNum = ((link.split("week"))[1].split("."))[0];
+        var ulist = document.getElementById("dropdownmenu");
+        weekNum = 5;
+        for (var i = 1; i <= weekNum; i++){
+          var a = document.createElement("a");
+          var newItem = document.createElement("li");
+          a.textContent = "Week " + i;
+          var goTo = ("https://midro.github.io/posts/"+"week"+i+".html").toLowerCase();
+          a.setAttribute('href', goTo);
+          newItem.appendChild(a);
+          ulist.appendChild(newItem);
+      };
+     }
+
+     function goBackToMainPage(){
+        window.location.href = "http://midro.github.io";
+     }
+     </script>
 </head>
 
 
@@ -32,13 +63,18 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="container">
-            <img class="navbar-brand" src="/pictures/midro_logo_tiny.png">
+            <img class="navbar-brand" onclick="goBackToMainPage()"src="../pictures/midro_logo_tiny.png">
             <div class="collapse navbar-collapse" id="navbarExample">
-                <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav ml-auto" >
                     <li class="nav-item active">
-                        <a class="nav-link" href="/index.html">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
                     </li>
-                   
+                    <li class="dropdown">
+                      <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Weeks
+                      <span class="caret"></span></a>
+                      <ul id="dropdownmenu" class="dropdown-menu">
+                      </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -47,8 +83,10 @@
     <div class="container">
 
         <div class="row">
+
+        
             <div >
-                <h1 class="mt-5 animated bounceInLeft" align="center">Week3</h1>
+                <h1 class="mt-5 animated bounceInLeft" align="center">Week 3</h1>
                 <hr>
                 
                 
@@ -166,9 +204,9 @@
         &emsp; On the engineering side, we finished the circuity we've been working on for the past few days. We hooked up all three reverse car sensors to one of the provided PCB boards by using two relays. Below, you can see our proof of concept in which we had LEDs in place of the sensors. The leftmost relay either switches on the LED or switches to the relay on the right. This relay then switches between the two LEDs connected to it. After we established that the relay circuit was working with LEDs, we replaced the LEDs with the actual car sensors. Thus, we are able to take measurements from each car sensor at different times.
         </p>
         <center>
-	        <video width="480" height="300" controls>
-	        	<source src="../images/RelayVideoRotated.mp4">
-	        </video>
+          <video width="480" height="300" controls>
+            <source src="../images/RelayVideoRotated.mp4">
+          </video>
         </center>
 
         <!-- ........................................FRIDAY..................................... -->
@@ -199,9 +237,7 @@
 
             </div>
         </div>
-      
         <!-- /.row -->
-
     </div>
     <!-- /.container -->
 
