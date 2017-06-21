@@ -1,169 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
 
-<head>
+        <title>Midro</title>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+        <!-- Bootstrap core CSS -->
+        <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <title>Midro</title>
+        <!-- Custom styles for this template -->
+        <link rel="stylesheet" href="../css/animate.css">
 
-    <!-- Bootstrap core CSS -->
-    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/main.css">
+        <!-- Temporary navbar container fix -->
+        <link href="https://fonts.googleapis.com/css?family=Spectral" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../css/kuracss.css">
+        <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+        <style type="text/css">
+         .navbar-brand{
+             cursor: pointer;
 
-    <!-- Custom styles for this template -->
-     <link rel="stylesheet" href="../css/animate.css">
-     
-     <link rel="stylesheet" href="../css/main.css">
-    <!-- Temporary navbar container fix -->
-    <link href="https://fonts.googleapis.com/css?family=Spectral" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../css/kuracss.css">
-         <script
-      src="https://code.jquery.com/jquery-3.2.1.min.js"
-      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-      crossorigin="anonymous"></script>
-     <style type="text/css">
-     .navbar-brand{
-        cursor: pointer;
+         }
+        </style>
+        <script type="text/javascript">
+         window.onload = function(){
+             var link = window.location.href;
+             var weekNum = ((link.split("week"))[1].split("."))[0];
+             var ulist = document.getElementById("dropdownmenu");
+             weekNum = 5;
+             for (var i = 1; i <= weekNum; i++){
+                 var a = document.createElement("a");
+                 var newItem = document.createElement("li");
+                 a.textContent = "Week " + i;
+                 var goTo = ("https://midro.github.io/posts/"+"week"+i+".html").toLowerCase();
+                 a.setAttribute('href', goTo);
+                 newItem.appendChild(a);
+                 ulist.appendChild(newItem);
+             };
+         }
 
-     }
-     </style>
-     <script type="text/javascript">
-     window.onload = function(){
-        var link = window.location.href;
-        var weekNum = ((link.split("week"))[1].split("."))[0];
-        var ulist = document.getElementById("dropdownmenu");
-        weekNum = 5;
-        for (var i = 1; i <= weekNum; i++){
-          var a = document.createElement("a");
-          var newItem = document.createElement("li");
-          a.textContent = "Week " + i;
-          var goTo = ("https://midro.github.io/posts/"+"week"+i+".html").toLowerCase();
-          a.setAttribute('href', goTo);
-          newItem.appendChild(a);
-          ulist.appendChild(newItem);
-      };
-     }
+         function goBackToMainPage(){
+             window.location.href = "http://midro.github.io";
+         }
+        </script>
+    </head>
 
-     function goBackToMainPage(){
-        window.location.href = "http://midro.github.io";
-     }
-     </script>
-</head>
-
-
-<body>
-
-    <!-- Navigation -->
-   <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarExample" aria-controls="navbarExample" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="container">
-            <img class="navbar-brand" onclick="goBackToMainPage()"src="../pictures/midro_logo_tiny.png">
-            <div class="collapse navbar-collapse" id="navbarExample">
-                <ul class="navbar-nav ml-auto" >
-                    <li class="nav-item active">
-                        <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="dropdown">
-                      <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Weeks
-                      <span class="caret"></span></a>
-                      <ul id="dropdownmenu" class="dropdown-menu">
-                      </ul>
-                    </li>
-                </ul>
+    <body>
+        <!-- Navigation -->
+        <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarExample" aria-controls="navbarExample" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="container">
+                <img class="navbar-brand" onclick="goBackToMainPage()"src="../pictures/midro_logo_tiny.png">
+                <div class="collapse navbar-collapse" id="navbarExample">
+                    <ul class="navbar-nav ml-auto" >
+                        <li class="nav-item active">
+                            <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Weeks
+                                <span class="caret"></span></a>
+                            <ul id="dropdownmenu" class="dropdown-menu">
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
-    <div class="container">
-        <div class="row">
-        
-
-            <div >
-                <h1 class="mt-5 animated bounceInLeft" align="center">Week 5</h1>
-                <hr>
-                
-                
-                
-                
-        <h2>Monday June 19, 2017</h2>
-
-        <p>
-
-          &emsp; We discussed what could be done to improve efficiency in our team and came up with the following organization and interactions. The team is interested in consistently improving and this meeting in particular was helpful in reviving our team spirit.
-        </p>
-          <br>
-  
-        <img class="week_img" src="../images/ProductivityPlan.PNG" style="width:600px; height:450px">
-
-        <br>
-
-        <p>
-
-        &emsp; The engineering team made a few decisions today regarding PCB design and housing. We will be using polycarbonate housing for our PCB box since polycarbonate allows RF signals to pass through. This will eliminate the need for an external antenna, will save money, and minimize board space. We also decided that our power supply will be three 1.5V batteries in series. Lastly, we decided to use a buck switch voltage regulator to step our power down to 3V (which is the power requirement for most of the components in our design) to conserve power. 
-
-        </p>
-
-        <p>
-
-        &emsp; We also put all the pieces of our circuit together! Next up we will need to create footprints for each component within our circuit and finally combine everything in designing our PCB.
-
-        </p>
-
-        
-        <!-- .......................................TUESDAY..................................... -->
-        <!-- ................................................................................... -->
-        <!-- ................................................................................... -->
-
-        <h2>Tuesday June 20, 2017</h2>
-    
-
-        <!-- ......................................WEDNESDAY..................................... -->
-        <!-- ................................................................................... -->
-        <!-- ................................................................................... -->
-
-        <h2>Wednesday June 21, 2017</h2>
-        
-
-        <!-- ......................................THURSDAY..................................... -->
-        <!-- ................................................................................... -->
-        <!-- ................................................................................... -->
-
-        <h2>Thursday June 22, 2017</h2>
-        
-
-        <!-- ........................................FRIDAY..................................... -->
-        <!-- ................................................................................... -->
-        <!-- ................................................................................... -->
-        <h2>Friday June 23, 2017</h2>
-
-
-            </div>
-        </div>
-      
-        <!-- /.row -->
-        </div>
-    </div>
-    <!-- /.container -->
-
-    <!-- Footer -->
-    <footer class="py-4 bg-inverse">
         <div class="container">
-            <p class="m-0 text-center text-white"> &copy; MiDro 2017</p>
+            <div class="row">
+                <div >
+                    <h1 class="mt-5 animated bounceInLeft" align="center">Week 5</h1>
+                    <hr>
+
+                    <!-- .......................................MONDAY...................................... -->
+                    <!-- ................................................................................... -->
+                    <!-- ................................................................................... -->
+
+                    <h2>Monday June 19, 2017</h2>
+                    <p>
+                        &emsp; We discussed what could be done to improve efficiency in our team and came up with the following organization and interactions. The team is interested in consistently improving and this meeting in particular was helpful in reviving our team spirit.
+                    </p>
+                    <br>
+                    <img class="week_img" src="../images/ProductivityPlan.PNG" style="width:600px; height:450px">
+                    <br>
+                    <p>
+                        &emsp; The engineering team made a few decisions today regarding PCB design and housing. We will be using polycarbonate housing for our PCB box since polycarbonate allows RF signals to pass through. This will eliminate the need for an external antenna, will save money, and minimize board space. We also decided that our power supply will be three 1.5V batteries in series. Lastly, we decided to use a buck switch voltage regulator to step our power down to 3V (which is the power requirement for most of the components in our design) to conserve power.
+                    </p>
+
+                    <p>
+                        &emsp; We also put all the pieces of our circuit together! Next up we will need to create footprints for each component within our circuit and finally combine everything in designing our PCB.
+                    </p>
+
+                    <!-- .......................................TUESDAY..................................... -->
+                    <!-- ................................................................................... -->
+                    <!-- ................................................................................... -->
+
+                    <h2>Tuesday June 20, 2017</h2>
+                    <p>
+                        Today, the software team continued the attempts at compiling source code, but an bug in the debug configuration stymied us. In the meantime, the team worked on setting up the REST api in django. The team also finished converting the complete circuit diagram from the previous day into circuits on KiCad. An intern started working on the KiCad tutorial to help with footprints in the upcoming days.
+                    </p>
+
+
+                    <!-- ......................................WEDNESDAY..................................... -->
+                    <!-- ................................................................................... -->
+                    <!-- ................................................................................... -->
+
+                    <h2>Wednesday June 21, 2017</h2>
+
+
+                    <!-- ......................................THURSDAY..................................... -->
+                    <!-- ................................................................................... -->
+                    <!-- ................................................................................... -->
+
+                    <h2>Thursday June 22, 2017</h2>
+
+
+                    <!-- ........................................FRIDAY..................................... -->
+                    <!-- ................................................................................... -->
+                    <!-- ................................................................................... -->
+                    <h2>Friday June 23, 2017</h2>
+
+
+                </div>
+            </div>
+
+            <!-- /.row -->
         </div>
-        <!-- /.container -->
-    </footer>
+            </div>
+            <!-- /.container -->
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="../vendor/jquery/jquery.min.js"></script>
-    <script src="../vendor/tether/tether.min.js"></script>
-    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+            <!-- Footer -->
+            <footer class="py-4 bg-inverse">
+                <div class="container">
+                    <p class="m-0 text-center text-white"> &copy; MiDro 2017</p>
+                </div>
+                <!-- /.container -->
+            </footer>
 
-</body>
+            <!-- Bootstrap core JavaScript -->
+            <script src="../vendor/jquery/jquery.min.js"></script>
+            <script src="../vendor/tether/tether.min.js"></script>
+            <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    </body>
 
 </html>
