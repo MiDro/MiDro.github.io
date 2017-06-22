@@ -37,3 +37,20 @@ ul li a{
  .navbar-inverse .navbar-nav .nav-link {
     color: rgba(255,255,255,1);
 }
+a:active{
+    color:white;
+}
+a:visited{
+    color:white;
+}
+a:hover{
+    color: white;
+}
+.toupright{
+    margin-left : 60%;
+    margin-top: -10%;
+}
+
+a:link{
+    color:white;
+}
