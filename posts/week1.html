@@ -30,8 +30,8 @@
              cursor: pointer;
 
          }
-  
-          
+
+
         </style>
         <script type="text/javascript">
          window.onload = function(){
@@ -50,44 +50,44 @@
              };
          }
 
-        
+
          function goBackToMainPage(){
              window.location.href = "http://midro.github.io";
          }
-         
+
          $(document).ready(function(){
              function getMobileOperatingSystem() {
           var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-        
+
               // Windows Phone must come first because its UA also contains "Android"
             if (/windows phone/i.test(userAgent)) {
                 return "Windows Phone";
             }
-        
+
             if (/android/i.test(userAgent)) {
                 return "Android";
             }
-        
+
             // iOS detection from: http://stackoverflow.com/a/9039885/177710
             if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
                 return "iOS";
             }
-        
+
             return "unknown";
         }
-        
+
         var is_safari = getMobileOperatingSystem() === "iOS";
-        
+
         if(is_safari){
             $(".navbar-toggler").hide();
            $(".navbar").append($(".dropdown"));
            $(".dropdown").addClass("toupright");
         }
-        
-             
-             
+
+
+
     });
-         
+
         </script>
     </head>
 
@@ -105,6 +105,9 @@
                     <ul class="navbar-nav ml-auto" >
                         <li class="nav-item active">
                             <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="https://midro.github.io/technical/technical.html">Technical <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="dropdown">
                             <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Weeks

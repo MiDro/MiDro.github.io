@@ -21,42 +21,42 @@
       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
       crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="./css/kuracss.css">
-  
+
 
      <script type="text/javascript">
 
-     
+
     $(document).ready(function(){
-        
+
         function getMobileOperatingSystem() {
           var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-        
+
               // Windows Phone must come first because its UA also contains "Android"
             if (/windows phone/i.test(userAgent)) {
                 return "Windows Phone";
             }
-        
+
             if (/android/i.test(userAgent)) {
                 return "Android";
             }
-        
+
             // iOS detection from: http://stackoverflow.com/a/9039885/177710
             if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
                 return "iOS";
             }
-        
+
             return "unknown";
         }
-        
+
         var is_safari = getMobileOperatingSystem() === "iOS";
-        
+
         if(is_safari){
             $(".navbar-toggler").hide();
            $(".navbar").append($(".dropdown"));
            $(".dropdown").addClass("toupright");
         }
-        
-      var allTheWeeks = [];  
+
+      var allTheWeeks = [];
       var allTheWeeksFixed = [];
 
 
@@ -71,15 +71,15 @@
                 }
             };
             allTheWeeksFixed.push(getRidOfSpace);
-            });  
+            });
 
-      
+
 
         $(".dropdown-menu li").click(function(){
             window.location.replace(("https://midro.github.io/posts/"+allTheWeeksFixed[$(this).index()]+".html").toLowerCase());
 
         });
-        
+
      });
 
      </script>
@@ -98,6 +98,9 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
                         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://midro.github.io/technical/technical.html">Technical <span class="sr-only">(current)</span></a>
                     </li>
                      <li class="dropdown" >
                         <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Weeks
@@ -126,7 +129,7 @@
             <div >
                 <h1 class="mt-5 animated bounceInLeft" align="center"><div><span style="color:#46f0e8;">M</span><span style="color:#45ede9;">u</span><span style="color:#44eae9;">d</span><span style="color:#43e7ea;">d</span><span style="color:#41e4eb;">e</span><span style="color:#40e1eb;">r</span><span style="color:#3fdeec;">s</span><span style="color:#3edced;"> </span><span style="color:#3dd9ed;">I</span><span style="color:#3cd6ee;">n</span><span style="color:#3ad3ef;">n</span><span style="color:#39d0ef;">o</span><span style="color:#38cdf0;">v</span><span style="color:#37caf1;">a</span><span style="color:#36c7f2;">t</span><span style="color:#35c4f2;">i</span><span style="color:#33c1f3;">n</span><span style="color:#32bef4;">g</span><span style="color:#31bbf4;"> </span><span style="color:#30b9f5;">t</span><span style="color:#2fb6f6;">h</span><span style="color:#2eb3f6;">e</span><span style="color:#2cb0f7;"> </span><span style="color:#2badf8;">D</span><span style="color:#2aaaf8;">r</span><span style="color:#29a7f9;">o</span></div></h1>
                 <hr>
-                <p align="center">The project's overarching aim is to provide a valuable resource for other cities to draw and expand upon.</p>        
+                <p align="center">The project's overarching aim is to provide a valuable resource for other cities to draw and expand upon.</p>
                 <p align="center" >This website was created to extensively document the endeavors of Priscilla Chu, Herrick Fang, Darien Joso, Sati Smyth, Elijah Whitsett, and Kayla Yamada during their time in the San Leandro Pilot City Incubator Program.</p>
             </div>
         </div>
@@ -145,10 +148,10 @@
                     <div class="card-block">
                         <h4 align="center">What is the Approach?</h4>
                         <p class="card-text">&nbsp;&nbsp;&nbsp;&nbsp;We will connect sensor modules to monitor the levels of trash in these new trashcans and display this information on a website that workers can easily access. This webpage will allow the workers to quickly service the necessary trashcans without excessive labor. The sensor modules will connect to the city's 6LoWPAN network for further optimization. This network allows us to transmit information with much lower power and cost requirements than traditional forms of communication (such as WiFi or cellular networks). The data from the sensor modules can then be displayed on the webpage.</p>
-                           
+
                     </div>
             </div>
-       
+
         </div>
         <!-- /.row -->
 
