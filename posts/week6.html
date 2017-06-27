@@ -34,7 +34,7 @@
              var link = window.location.href;
              var weekNum = ((link.split("week"))[1].split("."))[0];
              var ulist = document.getElementById("dropdownmenu");
-             weekNum = 5;
+             weekNum = 6;
              for (var i = 1; i <= weekNum; i++){
                  var a = document.createElement("a");
                  var newItem = document.createElement("li");
@@ -117,70 +117,35 @@
         <div class="container">
             <div class="row">
                 <div >
-                    <h1 class="mt-5 animated bounceInLeft" align="center">Week 5</h1>
+                    <h1 class="mt-5 animated bounceInLeft" align="center">Week 6</h1>
                     <hr>
 
                     <!-- .......................................MONDAY...................................... -->
                     <!-- ................................................................................... -->
                     <!-- ................................................................................... -->
 
-                    <h2>Monday June 19, 2017</h2>
+                    <h2>Monday June 26, 2017</h2>
                     <p>
-                        &emsp; We discussed what could be done to improve efficiency in our team and came up with the following organization and interactions. The team is interested in consistently improving and this meeting in particular was helpful in reviving our team spirit.
-                    </p>
-                    <br>
-                    <img class="week_img" src="../images/ProductivityPlan.PNG" style="width:600px; height:450px">
-                    <br>
-                    <p>
-                        &emsp; The engineering team made a few decisions today regarding PCB design and housing. We will be using polycarbonate housing for our PCB box since polycarbonate allows RF signals to pass through. This will eliminate the need for an external antenna, will save money, and minimize board space. We also decided that our power supply will be three 1.5V batteries in series. Lastly, we decided to use a buck switch voltage regulator to step our power down to 3V (which is the power requirement for most of the components in our design) to conserve power.
-                    </p>
-
-                    <p>
-                        &emsp; We also put all the pieces of our circuit together! Next up we will need to create footprints for each component within our circuit and finally combine everything in designing our PCB.
+                    Today, we were able to communicate with the Encompass board uploading a sketch to turn on GPIO pins. We used Keil to upload the relevant pieces, so we have confirmed that we receive some output from the circuit.
                     </p>
 
                     <!-- .......................................TUESDAY..................................... -->
                     <!-- ................................................................................... -->
                     <!-- ................................................................................... -->
 
-                    <h2>Tuesday June 20, 2017</h2>
-                    <p>
-                        Today, the software team continued the attempts at compiling source code, but an bug in the debug configuration stymied us. In the meantime, the team worked on setting up the REST api in django. The team also finished converting the complete circuit diagram from the previous day into circuits on KiCad. An intern started working on the KiCad tutorial to help with footprints in the upcoming days.
-                    </p>
 
 
                     <!-- ......................................WEDNESDAY..................................... -->
                     <!-- ................................................................................... -->
                     <!-- ................................................................................... -->
 
-                    <h2>Wednesday June 21, 2017</h2>
-                    <p>
-                      The software team was successful in getting the SDK to compile and run on the board. This will
-                      allow the team to start writing the code in the next few days and start working to calibrate the
-                      sensors on this system. The engineering team made footprint and looked into buffer transistors.
-                      Buffer transistors ensure that the relays have adequate voltage and current supply.
-                      The team had tested 3V relays, which did not work until the current was increased, and the
-                      buffer transistors address this problem. Additionally, the team researched
-                      buck convergers, so that not as much power is dissipated through the voltage regulator.
-                    </p>
-
                     <!-- ......................................THURSDAY..................................... -->
                     <!-- ................................................................................... -->
                     <!-- ................................................................................... -->
 
-                    <h2>Thursday June 22, 2017</h2>
-                    <p>
-                      Today, the software team sent logs to Mario. We also set up Latex Documentation. We were able to start setting up the CMS, but were not successful in the end. We will have to try again tomorrow. The interns were able to update the midro.github.io site with a technical page. This page will serve to list all the resources, software, and hardware that the team has used during the project. The engineers looked at power efficiency. They also worked on the regulator circuit as well as the transistor circuit. They worked on adding more footprints. We also updated the circuits to include more transistors.
-                    </p>
-
                     <!-- ........................................FRIDAY..................................... -->
                     <!-- ................................................................................... -->
                     <!-- ................................................................................... -->
-                    <h2>Friday June 23, 2017</h2>
-                    <p>
-                        We set up the Paradox system for debugging. The software team wrote some pseudo-code to interface with the board. Also, the gateway CMS has been setup, so there needs to be some set up of a domain name to route our server to the internet.
-                    </p>
-
 
                 </div>
             </div>
