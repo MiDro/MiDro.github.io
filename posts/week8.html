@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Midro</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link rel="stylesheet" href="../css/animate.css">
+
+        <link rel="stylesheet" href="../css/main.css">
+        <!-- Temporary navbar container fix -->
+        <link href="https://fonts.googleapis.com/css?family=Spectral" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../css/kuracss.css">
+        <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+        <style type="text/css">
+         .navbar-brand{
+             cursor: pointer;
+
+         }
+        </style>
+         <script type="text/javascript">
+         window.onload = function(){
+             var link = window.location.href;
+             var weekNum = ((link.split("week"))[1].split("."))[0];
+             var ulist = document.getElementById("dropdownmenu");
+             weekNum = 6;
+             for (var i = 1; i <= weekNum; i++){
+                 var a = document.createElement("a");
+                 var newItem = document.createElement("li");
+                 a.textContent = "Week " + i;
+                 var goTo = ("https://midro.github.io/posts/"+"week"+i+".html").toLowerCase();
+                 a.setAttribute('href', goTo);
+                 newItem.appendChild(a);
+                 ulist.appendChild(newItem);
+             };
+         }
+
+
+         function goBackToMainPage(){
+             window.location.href = "http://midro.github.io";
+         }
+
+         $(document).ready(function(){
+             function getMobileOperatingSystem() {
+          var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+              // Windows Phone must come first because its UA also contains "Android"
+            if (/windows phone/i.test(userAgent)) {
+                return "Windows Phone";
+            }
+
+            if (/android/i.test(userAgent)) {
+                return "Android";
+            }
+
+            // iOS detection from: http://stackoverflow.com/a/9039885/177710
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                return "iOS";
+            }
+
+            return "unknown";
+        }
+
+        var is_safari = getMobileOperatingSystem() === "iOS";
+
+        if(is_safari){
+            $(".navbar-toggler").hide();
+           $(".navbar").append($(".dropdown"));
+           $(".dropdown").addClass("toupright");
+        }
+
+
+
+    });
+
+        </script>
+    </head>
+
+    <body>
+        <!-- Navigation -->
+        <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarExample" aria-controls="navbarExample" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="container">
+                <img class="navbar-brand" onclick="goBackToMainPage()"src="../pictures/midro_logo_tiny.png">
+                <div class="collapse navbar-collapse" id="navbarExample">
+                    <ul class="navbar-nav ml-auto" >
+                        <li class="nav-item active">
+                            <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="https://midro.github.io/technical/technical.html">Technical <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Weeks
+                                <span class="caret"></span></a>
+                            <ul id="dropdownmenu" class="dropdown-menu">
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="row">
+                <div >
+                    <h1 class="mt-5 animated bounceInLeft" align="center">Week 8</h1>
+                    <hr>
+
+                    <!-- .......................................MONDAY...................................... -->
+                    <!-- ................................................................................... -->
+                    <!-- ................................................................................... -->
+
+                    <h2>Monday July 10, 2017</h2>
+                    <p>
+
+                    </p>
+
+                    <!-- .......................................TUESDAY..................................... -->
+                    <!-- ................................................................................... -->
+                    <!-- ................................................................................... -->
+                    <h2>Tuesday July 11, 2017</h2>
+                    <p>
+
+                    </p>
+
+
+                    <!-- ......................................WEDNESDAY..................................... -->
+                    <!-- ................................................................................... -->
+                    <!-- ................................................................................... -->
+                    <h2>Wednesday July 12, 2017</h2>
+                    <p>
+
+                    </p>
+                    <!-- ......................................THURSDAY..................................... -->
+                    <!-- ................................................................................... -->
+                    <!-- ................................................................................... -->
+                    <h2>Thursday July 13, 2017</h2>
+                    <p>
+
+                    </p>
+                    <!-- ........................................FRIDAY..................................... -->
+                    <!-- ................................................................................... -->
+                    <!-- ................................................................................... -->
+                    <h2>Friday July 14, 2017</h2>
+                    <p>
+
+                    </p>
+                </div>
+            </div>
+
+            <!-- /.row -->
+        </div>
+      </div>
+            <!-- /.container -->
+
+            <!-- Footer -->
+            <footer class="py-4 bg-inverse">
+                <div class="container">
+                    <p class="m-0 text-center text-white"> &copy; MiDro 2017</p>
+                </div>
+                <!-- /.container -->
+            </footer>
+
+            <!-- Bootstrap core JavaScript -->
+            <script src="../vendor/jquery/jquery.min.js"></script>
+            <script src="../vendor/tether/tether.min.js"></script>
+            <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    </body>
+
+</html>
