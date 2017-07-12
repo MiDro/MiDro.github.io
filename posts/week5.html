@@ -126,17 +126,17 @@
 
                     <h2>Monday June 19, 2017</h2>
                     <p>
-                        &emsp; We discussed what could be done to improve efficiency in our team and came up with the following organization and interactions. We are interested in consistently improving and this meeting in particular was helpful in reviving our team spirit.
+                        &emsp; We discussed what could be done to improve efficiency in our team and came up with the following organization and interactions. The team is interested in consistently improving and this meeting in particular was helpful in reviving our team spirit.
                     </p>
                     <br>
                     <img class="week_img" src="../images/ProductivityPlan.PNG" style="width:600px; height:450px">
                     <br>
                     <p>
-                        &emsp; Additionally, the engineering team made a few decisions today regarding PCB design and housing. We will be using polycarbonate housing for our PCB box since polycarbonate allows RF signals to pass through. This will eliminate the need for an external antenna. Also, this will save money and minimize board space. We also decided that our power supply will be three 1.5V batteries in series. Lastly, we decided to use a buck switch voltage regulator to step our power down to 3V (which is the power requirement for most of the components in our design) to conserve power.
+                        &emsp; The engineering team made a few decisions today regarding PCB design and housing. We decided on a polycarbonate housing for our PCB box since polycarbonate allows RF signals to pass through. This will eliminate the need for an external antenna and minimize board space, both of which save money. We also decided that our power supply will be three 1.5V batteries to generate 4.5V. We estimated that these would provide the sensors with at least 5 years of service with minimal maintenance. Lastly, we decided to use a buck switch voltage regulator to step our power down to 3V (which is the power requirement for most of the components in our design) to conserve power.
                     </p>
 
                     <p>
-                        &emsp; We also put all the pieces of our circuit together! Next up, we will need to create footprints for each component within our circuit and finally combine everything in designing our PCB.
+                        &emsp; We connected all of the pieces of our circuit together! The next step involves creating footprints, the physical area that each component requires, for each component within our circuit. Then, we link each footprint to its component in the circuit.
                     </p>
 
                     <!-- .......................................TUESDAY..................................... -->
@@ -145,7 +145,7 @@
 
                     <h2>Tuesday June 20, 2017</h2>
                     <p>
-                        Today, the software team continued the attempts at compiling source code, but an bug in the debug configuration stymied us. In the meantime, the team worked on setting up the REST api in django. The team also finished converting the complete circuit diagram from the previous day into circuits on KiCad. An intern started working on the KiCad tutorial to help with footprints in the upcoming days.
+                        The software team continues its attempts at compiling the source code, but a bug in the debug configuration stymied us. In the meantime, the team worked on setting up the REST api in django. Meanwhile, the engineering team finished converting the complete circuit diagram from the previous day into circuits on KiCad. An intern started working on the KiCad tutorial to help with footprints in the upcoming days.
                     </p>
 
 
@@ -155,12 +155,9 @@
 
                     <h2>Wednesday June 21, 2017</h2>
                     <p>
-                      We were successful in getting the SDK to compile and run on the board. This allows us to start writing the code in the next few days and start working to calibrate the
-                      sensors on this system. The engineering team made footprints and looked into buffer transistors.
-                      Buffer transistors ensure that the relays have adequate voltage and current supply.
-                      The team had tested 3V relays, which did not work until the current was increased, and the
-                      buffer transistors address this problem. Additionally, the team researched
-                      buck convergers, so that not as much power is dissipated through the voltage regulator.
+                      The software team was successful in getting the SDK to compile and run on the board. This allows the team to start writing the code in the next few days and start calibrating the sensors on this system. The engineering team made footprint and looked into buffer transistors.
+                      Buffer transistors ensure that the relays have adequate voltage and current supply. The team had tested 3V relays, which did not work until the current was increased, and the
+                      buffer transistors address this problem. Additionally, the team researched buck converters to minimize power loss across the voltage regulator.
                     </p>
 
                     <!-- ......................................THURSDAY..................................... -->
@@ -169,7 +166,7 @@
 
                     <h2>Thursday June 22, 2017</h2>
                     <p>
-                      We sent logs to Mario. We also set up Latex Documentation. We started setting up the CMS, but were not successful in the end. We will have to try again tomorrow. The interns were able to update the midro.github.io site with a technical page. This page will serve to list all the resources, software, and hardware that the team has used during the project. The engineering team looked at power efficiency. Additionally, they worked on the regulator circuit as well as the transistor circuit. Specifically, they worked on adding more footprints. They also updated the circuits to include more transistors.
+                      The software team sent logs to Mario. We also began LaTex Documentation and started setting up the CMS, but were not successful in the end. We will have to try again tomorrow. The interns were able to update the midro.github.io site with a technical page. This page will serve to list all resources, software, and hardware that the team has used during the project. The engineers looked at power efficiency and altering both the regulator circuit and the transistor circuit. More footprints were created for the circuit. The circuits were additionally revised to include more transistors.
                     </p>
 
                     <!-- ........................................FRIDAY..................................... -->
@@ -177,7 +174,7 @@
                     <!-- ................................................................................... -->
                     <h2>Friday June 23, 2017</h2>
                     <p>
-                        We set up the Paradox system for debugging. The software team wrote some pseudo-code to interface with the board. Also, the gateway CMS has been setup, so there needs to be some set up of a domain name to route our server to the internet.
+                        We set up the Paradox system for debugging. The software team came up with pseudo-code to interface with the board. The gateway CMS has been setup, so the domain name needs to be setup to route our server to the internet.
                     </p>
 
 
