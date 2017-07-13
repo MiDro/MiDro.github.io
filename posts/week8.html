@@ -126,7 +126,9 @@
 
                     <h2>Monday July 10, 2017</h2>
                     <p>
+                      To solder surface-mount components to a PCB, we need to apply solder paste to the mounting pads beforehand. However, since some of the pads are extremely close to each other, we cannot apply the paste by hand for fear of creating a bridge between two pads, shorting them to each other. One option to accurately apply solder paste is to use a stencil. From the PCB KiCAD file, we could export an SVG file of the mounting pads. We use this file to laser cut a 0.003" thick sheet of Mylar. The preset settings for Mylar were not successful in accurately cutting the outline of the mounting pads. We switched intensity, speed, resolution, and material thickness values to no avail. We put this endeavor to rest until the next day. To finish up the day, we completed the first wave of revisions for the second iteration of the PCB.
 
+                      One of the important tools in the microcontroller is the timer. Considering how reliant on periodicity our project is, we needed to get a good grasp of the built-in timer ability of the microcontroller. As expected, we ran into bugs as fast as we could count to 1. There were a lot of times where to code would run infinitely, but when stepped through, they perform perfectly fine. We consulted with Mario to offer insight on how the timers in the code were created and how we can use them to their full potential.
                     </p>
 
                     <!-- .......................................TUESDAY..................................... -->
@@ -134,7 +136,7 @@
                     <!-- ................................................................................... -->
                     <h2>Tuesday July 11, 2017</h2>
                     <p>
-
+                      After tinkering with the laser cutter settings, we determined that the proble was not with the laser cutter, but with the path. The pads were overlapping, so we reduced their size in order to create wider gaps between them. We laser cut our first set of stencils and began applying solder. Another team member looked through the circuit layout and noticed some discrepancies that could potentially damage our boards. We had to alter the board, either by drilling, scratching, or adding wires to fix the circuit. With the circuit corrected, we continued with soldering, but problems popped up left and right, so we put this process on pause.
                     </p>
 
 
